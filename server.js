@@ -5,4 +5,6 @@ server.listen(3000, () => {
     console.log("Api iniciada na porta 3000");
 });
 
+
+
 module.exports = app;
