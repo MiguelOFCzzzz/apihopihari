@@ -1,0 +1,31 @@
+{
+  "name": "apihopihari",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+//github.com/MiguelOFCzzzz/apihopihari/issues"
+  },
+  "author": "Miguel",
+  "license": "ISC",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/MiguelOFCzzzz/apihopihari.git"
+  },
+  "homepage": "https://github.com/MiguelOFCzzzz/apihopihari.git",
+  "dependencies": {
+    "app": "^0.1.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "http": "^0.0.1-security",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10",
+    "start": "^5.1.0"
+  }
+}
