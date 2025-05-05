@@ -4,8 +4,8 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'root',
-  port: 3307,
-  database: 'hopihari_db',
+  port: 3306,
+  database: 'hopi_hari_db',
 });
 
 exports.execute = (query, params = [], pool = connection) => {

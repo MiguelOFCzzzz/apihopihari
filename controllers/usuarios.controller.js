@@ -28,12 +28,22 @@ exports.atualizarUsuario = async (req, res) => {
      exports.cadastroUsuario = async (req, res) => {
         try{
             const resultado = await mysql.execute(
-                `INSERT INTO users (name, email, password)
-                VALUES (?, ?, ?);`,
+                `INSERT INTO users
+                first_name,
+                last_name,
+                email,
+                password,
+                birth_date,
+                phone
+                )
+                 VALUES (?,?,?,?,?,?);`,
                 [
-                    req.body.name,
+                    req.body.first_name,
+                    req.body.last_name,
                     req.body.email,
-                    req.body.password
+                    req.body.password,
+                    req.body.birth_date,
+                    req.body.phone
                 ]
             );
             return res.status(201).send({ "mensagem": "Usuario cadastrado com sucesso",
@@ -60,5 +70,10 @@ exports.atualizarUsuario = async (req, res) => {
                 return res.status(500).send({ "mensagem": error });
             }
             }
+
+
+
+
+            
 
     
