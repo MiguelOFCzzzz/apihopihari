@@ -29,8 +29,9 @@ exports.atualizarUsuario = async (req, res) => {
 
      exports.cadastroUsuario = async (req, res) => {
         try{
+            const hash = await bcrypt.hash(req.body.password, 10);
             const resultado = await mysql.execute(
-                `INSERT INTO users
+                `INSERT INTO users (
                 first_name,
                 last_name,
                 email,
@@ -43,7 +44,7 @@ exports.atualizarUsuario = async (req, res) => {
                     req.body.first_name,
                     req.body.last_name,
                     req.body.email,
-                    req.body.password,
+                    hash,
                     req.body.birth_date,
                     req.body.phone
                 ]
@@ -80,7 +81,6 @@ exports.atualizarUsuario = async (req, res) => {
                   const usuario = await mysql.execute(
                     'SELECT * FROM users WHERE email= ?', 
                     [req.body.email]);
-                    console.log(usuario);
                     if (usuario.length == 0) {
                         return res.status(401).send({"Mensagem": "Usuario não cadastrado"});
                     }
@@ -90,7 +90,6 @@ exports.atualizarUsuario = async (req, res) => {
                     if(!match) {
                         return res.status(401).send({"Mensagem": "Senha incorreta"});
                     }
-                    console.log(match, req.body.password, usuario[0].password);
 
                     const token = jwt.sign({
                      id :usuario[0].id,

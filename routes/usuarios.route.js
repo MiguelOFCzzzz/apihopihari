@@ -9,7 +9,7 @@ router.post('/cadastro', usuariosController.cadastroUsuario);
 
 router.delete('/:id', usuariosController.deletarUsuario);
 
-router.post('/login', usuariosController.loginUsuario);
+router.post('/login', usuariosController.login);
 
 
 module.exports = router;
