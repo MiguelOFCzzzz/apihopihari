@@ -53,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `hopi_hari_db`.`users` (
   UNIQUE INDEX `email` (`email` ASC) VISIBLE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
-+
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 
