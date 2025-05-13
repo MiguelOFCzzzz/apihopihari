@@ -22,7 +22,7 @@ exports.atualizarUsuario = async (req, res) => {
        "Resultado": resultado
         });
     }catch (error) {
-        return res.status(500).send({ "mensagem": error });
+        return res.status(500).send( error );
     }
     }
 
@@ -53,7 +53,7 @@ exports.atualizarUsuario = async (req, res) => {
             "Resultado": resultado
             });
         }catch (error) {
-            return res.status(500).send({ "mensagem": error });
+            return res.status(500).send(error);
         }
         }
 
@@ -70,7 +70,7 @@ exports.atualizarUsuario = async (req, res) => {
                 "Resultado": resultado
                 });
             }catch (error) {
-                return res.status(500).send({ "mensagem": error });
+                return res.status(500).send(error);
             }
             }
 
@@ -107,7 +107,7 @@ exports.atualizarUsuario = async (req, res) => {
               
 
                 }  catch (error) {
-                  return res.status(500).send({ "Error": error })
+                  return res.status(500).send(error)
             }
 
         }
